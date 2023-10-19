@@ -1,3 +1,4 @@
+"use client";
 import {
   HomeIcon,
   ListOrderedIcon,
@@ -10,12 +11,17 @@ import {
 import { Button } from "./button";
 import { Card } from "./card";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./sheet";
+import { signIn } from "next-auth/react";
 
 export const Header = () => {
+  const handleLoginClick = async () => {
+    await signIn();
+  };
+
   return (
     <Card className="flex justify-between p-[1.875rem]">
       <Sheet>
-        <SheetTrigger>
+        <SheetTrigger asChild>
           <Button size="icon" variant="outline">
             <MenuIcon />
           </Button>
@@ -27,14 +33,18 @@ export const Header = () => {
           </SheetHeader>
 
           <div className="mt-2 flex flex-col gap-3">
-            <Button variant="outline" className="w-full justify-start gap-2">
-              <HomeIcon />
-              Início
+            <Button
+              onClick={handleLoginClick}
+              variant="outline"
+              className="w-full justify-start gap-2"
+            >
+              <LogInIcon />
+              Fazer Login
             </Button>
 
             <Button variant="outline" className="w-full justify-start gap-2">
-              <LogInIcon />
-              Fazer Login
+              <HomeIcon />
+              Início
             </Button>
 
             <Button variant="outline" className="w-full justify-start gap-2">
