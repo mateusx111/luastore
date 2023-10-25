@@ -28,7 +28,7 @@ export default async function Home() {
     },
   });
   return (
-    <div className="flex flex-col gap-8 py-8">
+    <div className="py- flex flex-col gap-8">
       <PromoBanner src="/banner-home-01.svg" alt="Banner Home 01" />
 
       <div className="px-5">
