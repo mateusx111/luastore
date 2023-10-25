@@ -31,7 +31,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
       </div>
 
       <div className="flex flex-col gap-1">
-        <p className="overflow-auto text-ellipsis whitespace-nowrap text-sm">
+        <p className="overflow-hide text-ellipsis whitespace-nowrap text-sm">
           {product.name}
         </p>
 
