@@ -9,8 +9,8 @@ interface ProductItemProps {
 
 export const ProductItem = ({ product }: ProductItemProps) => {
   return (
-    <div className="mt-4 flex max-w-[170px] flex-col gap-4">
-      <div className="hide-scrollbar relative flex h-[170px] w-[156] items-center justify-center rounded-lg bg-accent">
+    <div className="mt-4 flex flex-col gap-4">
+      <div className="hide-scrollbar relative flex h-[170px] w-full items-center justify-center rounded-lg bg-accent">
         <Image
           src={product.imageUrls[0]}
           height={0}
