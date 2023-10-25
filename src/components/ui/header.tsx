@@ -117,7 +117,7 @@ export const Header = () => {
       </Sheet>
 
       <Link href="/">
-        <h1 className="text-lg font-semibold">
+        <h1 className="text-2xl font-semibold">
           <span className="text-primary">FSW</span> Luastore
         </h1>
       </Link>
