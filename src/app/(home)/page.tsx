@@ -22,23 +22,27 @@ export default async function Home() {
     },
   });
   return (
-    <div>
+    <div className="flex flex-col gap-8">
       <PromoBanner src="/banner-home-01.svg" alt="Banner Home 01" />
 
-      <div className="mt-8 px-5">
+      <div className="px-5">
         <Categories />
       </div>
 
-      <div className="mt-8">
+      <div>
         <SectionTitle>Ofertas</SectionTitle>
         <ProductList products={deals} />
       </div>
 
       <PromoBanner src="/banner-home-02.svg" alt="Banner Home 02" />
 
-      <div className="mt-8">
+      <div>
         <SectionTitle>Teclados</SectionTitle>
         <ProductList products={keyboards} />
+      </div>
+
+      <div>
+        <PromoBanner src="/banner-home-03.svg" alt="Banner Home 03" />
       </div>
     </div>
   );
